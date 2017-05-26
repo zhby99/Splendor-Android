@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/MyApplication/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/MyApplication/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/MyApplication/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout-v11/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/MyApplication/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/MyApplication/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/MyApplication/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout-v11/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout-v11/notification_template_big_media_custom.xml"
+    }
+]

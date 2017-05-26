@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c57f7b50088ce03b06a48ed3da97ce3359f5a21b">
+        <dex dex="/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1f05eff7a9babd66fd48b054d79cecddedac3ac1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0e4b45650dd615a973e41b433844f6437c86dcca/classes.dex" />
+    </item>
+
+</items>
