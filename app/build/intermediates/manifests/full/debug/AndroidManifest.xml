@@ -21,14 +21,19 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.boyinzhang.splendorandroid.MainActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.boyinzhang.splendorandroid.GameActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.boyinzhang.splendorandroid.ReserveActivity"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

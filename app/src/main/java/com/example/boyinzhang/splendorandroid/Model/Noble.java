@@ -2,13 +2,15 @@ package com.example.boyinzhang.splendorandroid.Model;
 
 import com.example.boyinzhang.splendorandroid.Model.utils.GemInfo;
 
+import java.io.Serializable;
+
 import static com.example.boyinzhang.splendorandroid.Model.utils.GameUtils.NOBLE_SCORE;
 
 /**
  * Created by boyinzhang on 5/25/17.
  */
 
-public class Noble {
+public class Noble implements Serializable {
     private int score;
     private GemInfo threshold;
     private boolean isRecruited;

@@ -1,10 +1,12 @@
 package com.example.boyinzhang.splendorandroid.Model;
 
+import java.io.Serializable;
+
 /**
  * Created by boyinzhang on 5/25/17.
  */
 
-public enum Gem {
+public enum Gem implements Serializable {
     DIAMOND("Diamond",1){
 
     },

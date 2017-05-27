@@ -1,10 +1,12 @@
 package com.example.boyinzhang.splendorandroid.Model.utils;
 
+import java.io.Serializable;
+
 /**
  * Created by boyinzhang on 5/25/17.
  */
 
-public class GameUtils {
+public class GameUtils implements Serializable {
     public final static int NUM_PLAYER = 4;
     public final static int NUM_CARD_RANK = 3;
     public final static int NUM_CARD_PER_RANK = 4;

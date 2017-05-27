@@ -3,6 +3,7 @@ package com.example.boyinzhang.splendorandroid.Model;
 import com.example.boyinzhang.splendorandroid.Game.Game;
 import com.example.boyinzhang.splendorandroid.Model.utils.GemInfo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import static com.example.boyinzhang.splendorandroid.Model.utils.GameUtils.*;
@@ -13,7 +14,7 @@ import static java.lang.Math.max;
  * Created by boyinzhang on 5/25/17.
  */
 
-public class Player {
+public class Player implements Serializable {
     final private int id;
     private String name;
     private int score;

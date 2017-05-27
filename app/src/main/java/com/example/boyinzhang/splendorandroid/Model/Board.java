@@ -2,6 +2,7 @@ package com.example.boyinzhang.splendorandroid.Model;
 
 import com.example.boyinzhang.splendorandroid.Model.utils.GemInfo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -12,7 +13,7 @@ import static com.example.boyinzhang.splendorandroid.Model.utils.GemInfo.combine
  * Created by boyinzhang on 5/25/17.
  */
 
-public class Board{
+public class Board implements Serializable {
 
     private int numPlayer;
     private Noble[] nobles;

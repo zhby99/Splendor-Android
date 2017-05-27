@@ -2,11 +2,13 @@ package com.example.boyinzhang.splendorandroid.Model;
 
 import com.example.boyinzhang.splendorandroid.Model.utils.GemInfo;
 
+import java.io.Serializable;
+
 /**
  * Created by boyinzhang on 5/25/17.
  */
 
-public class Card {
+public class Card implements Serializable {
     final private int cardScore;
     final private GemInfo developmentCost;
     final private Gem targetGem;

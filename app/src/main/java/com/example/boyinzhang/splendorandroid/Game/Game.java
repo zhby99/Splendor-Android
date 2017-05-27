@@ -2,6 +2,7 @@ package com.example.boyinzhang.splendorandroid.Game;
 
 import com.example.boyinzhang.splendorandroid.Model.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import static com.example.boyinzhang.splendorandroid.Model.utils.GameUtils.*;
@@ -10,7 +11,7 @@ import static com.example.boyinzhang.splendorandroid.Model.utils.GameUtils.*;
  * Created by boyinzhang on 5/25/17.
  */
 
-public class Game {
+public class Game implements Serializable{
     public Player[] players;
     public Player currentPlayer;
     public Board gameBoard;

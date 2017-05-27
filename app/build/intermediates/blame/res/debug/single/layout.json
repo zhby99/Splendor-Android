@@ -148,6 +148,10 @@
         "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout/select_dialog_item_material.xml"
     },
     {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/build/intermediates/res/merged/debug/layout/start.xml",
+        "source": "/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/src/main/res/layout/start.xml"
+    },
+    {
         "merged": "/Users/boyinzhang/Desktop/summerProject/MyApplication/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
         "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout/abc_screen_simple.xml"
     },
@@ -214,6 +218,10 @@
     {
         "merged": "/Users/boyinzhang/Desktop/summerProject/MyApplication/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
         "source": "/Users/boyinzhang/.android/build-cache/f42fc42995570e5d33c19df89839f280c212713c/output/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/build/intermediates/res/merged/debug/layout/reserve_board.xml",
+        "source": "/Users/boyinzhang/Desktop/summerProject/Splendor-Android/app/src/main/res/layout/reserve_board.xml"
     },
     {
         "merged": "/Users/boyinzhang/Desktop/summerProject/MyApplication/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",

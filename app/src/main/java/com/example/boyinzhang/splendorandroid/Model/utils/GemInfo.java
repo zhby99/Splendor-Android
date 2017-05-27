@@ -1,5 +1,6 @@
 package com.example.boyinzhang.splendorandroid.Model.utils;
 
+import java.io.Serializable;
 import java.util.Iterator;
 
 import static java.lang.Math.max;
@@ -8,7 +9,7 @@ import static java.lang.Math.max;
  * Created by boyinzhang on 5/25/17.
  */
 
-public class GemInfo implements Iterable<Integer> {
+public class GemInfo implements Iterable<Integer>, Serializable {
 
     public int diamond;
     public int emerald;
