@@ -34,6 +34,9 @@ public class GameActivity extends Activity{
     GemInfo currentGemInfo;
     Card selectedCard;
     LinearLayout[] CardsLayout;
+    TextView[][] PlayerGemsInfo;
+    TextView[][] PlayerCollectInfo;
+    TextView[] PlayerTag;
 
     public final static String KEY = "com.boyin.game";
 
@@ -50,35 +53,103 @@ public class GameActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        LinearLayout cardBoard = (LinearLayout) findViewById(R.id.card_board);
-        CardsLayout = new LinearLayout[3];
-        CardsLayout[0] = (LinearLayout) cardBoard.getChildAt(0);
-        CardsLayout[1] = (LinearLayout) cardBoard.getChildAt(1);
-        CardsLayout[2] = (LinearLayout) cardBoard.getChildAt(2);
-
+        linkMembers();
         this.game = new Game();
         currentGemInfo = new GemInfo(0);
-        for(int i =0; i<3;i++){
-            for (int j=0;j<4;j++){
-                LinearLayout tmpCardBoard = (LinearLayout) CardsLayout[i].getChildAt(j+1);
-                ImageView cardView = (ImageView) tmpCardBoard.getChildAt(0);
-                cardView.setImageDrawable(drawCard(game.getGameBoard().getCards()[i][j]));
-                cardView.setScaleType(ImageView.ScaleType.FIT_XY);
-                final int finalI = i;
-                final int finalJ = j;
-                cardView.setOnClickListener(new Button.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        selectedCard = game.getGameBoard().getCards()[finalI][finalJ];
-                    }
-                });
-            }
-        }
+        initialCards();
         addGemButtonListeners();
         addButtonListeners();
+        updateScoreBoard();
 
 
+    }
+
+    private void updateScoreBoard() {
+        int currentPlayerIndex = game.getCurrentPlayer().getPlayerId()-1;
+
+        for(int i = 0; i<4;i++){
+            PlayerTag[i].setBackgroundColor(Color.RED);
+            PlayerGemsInfo[i][0].setText(String.valueOf(game.getPlayers()[i].getGolds()));
+            PlayerGemsInfo[i][1].setText(String.valueOf(game.getPlayers()[i].getGems().diamond));
+            PlayerGemsInfo[i][2].setText(String.valueOf(game.getPlayers()[i].getGems().emerald));
+            PlayerGemsInfo[i][3].setText(String.valueOf(game.getPlayers()[i].getGems().onyx));
+            PlayerGemsInfo[i][4].setText(String.valueOf(game.getPlayers()[i].getGems().ruby));
+            PlayerGemsInfo[i][5].setText(String.valueOf(game.getPlayers()[i].getGems().sapphire));
+
+            PlayerCollectInfo[i][0].setText(String.valueOf(game.getPlayers()[i].getCards().diamond));
+            PlayerCollectInfo[i][1].setText(String.valueOf(game.getPlayers()[i].getCards().emerald));
+            PlayerCollectInfo[i][2].setText(String.valueOf(game.getPlayers()[i].getCards().onyx));
+            PlayerCollectInfo[i][3].setText(String.valueOf(game.getPlayers()[i].getCards().ruby));
+            PlayerCollectInfo[i][4].setText(String.valueOf(game.getPlayers()[i].getCards().sapphire));
+        }
+        PlayerTag[currentPlayerIndex].setBackgroundColor(Color.GREEN);
+    }
+
+    private void linkMembers() {
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+                LinearLayout cardBoard = (LinearLayout) findViewById(R.id.card_board);
+                CardsLayout = new LinearLayout[3];
+                CardsLayout[0] = (LinearLayout) cardBoard.getChildAt(0);
+                CardsLayout[1] = (LinearLayout) cardBoard.getChildAt(1);
+                CardsLayout[2] = (LinearLayout) cardBoard.getChildAt(2);
+                PlayerGemsInfo = new TextView[4][6];
+                PlayerCollectInfo = new TextView[4][5];
+                PlayerTag = new TextView[4];
+                LinearLayout scoreBoard = (LinearLayout) findViewById(R.id.score_board);
+                for (int i=0;i<4;i++){
+                    LinearLayout tmpScoreBoard = (LinearLayout) scoreBoard.getChildAt(i);
+                    LinearLayout tmpGemsBoard = (LinearLayout) tmpScoreBoard.getChildAt(1);
+                    for(int j=0;j<6;j++){
+                        PlayerGemsInfo[i][j] = (TextView) tmpGemsBoard.getChildAt(j+1);
+                    }
+                    LinearLayout tmpCollectBoard = (LinearLayout) tmpScoreBoard.getChildAt(2);
+                    for (int m=0;m<5;m++){
+                        PlayerCollectInfo[i][m]=(TextView) tmpCollectBoard.getChildAt(m+2);
+                    }
+                    LinearLayout tmpLayout = (LinearLayout) tmpScoreBoard.getChildAt(0);
+                    PlayerTag[i] = (TextView) tmpLayout.getChildAt(0);
+
+
+                }
+            }
+
+        }).start();
+
+    }
+
+    private void initialCards() {
+        new Thread() {
+            public void run() {
+                //这儿是耗时操作，完成之后更新UI；
+                runOnUiThread(new Runnable(){
+
+                    @Override
+                    public void run() {
+                        //更新UI
+                        for(int i =0; i<3;i++){
+                            for (int j=0;j<4;j++){
+                                LinearLayout tmpCardBoard = (LinearLayout) CardsLayout[i].getChildAt(j+1);
+                                ImageView cardView = (ImageView) tmpCardBoard.getChildAt(0);
+
+                                cardView.setImageDrawable(drawCard(game.getGameBoard().getCards()[i][j]));
+                                cardView.setScaleType(ImageView.ScaleType.FIT_XY);
+                                final int finalI = i;
+                                final int finalJ = j;
+                                cardView.setOnClickListener(new Button.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        selectedCard = game.getGameBoard().getCards()[finalI][finalJ];
+                                    }
+                                });
+                            }
+                        }
+                    }
+
+                });
+            }
+        }.start();
 
     }
 
@@ -116,6 +187,7 @@ public class GameActivity extends Activity{
                 else{
                     currentGemInfo.reset();
                     game.turnToNextPlayer();
+                    updateScoreBoard();
                 }
             }
         });
@@ -139,6 +211,10 @@ public class GameActivity extends Activity{
                                 .setPositiveButton("Yes" ,  null )
                                 .show();
                     }
+                    else {
+                        game.turnToNextPlayer();
+                        updateScoreBoard();
+                    }
                 }
             }
         });
@@ -154,6 +230,7 @@ public class GameActivity extends Activity{
                     game.getGameBoard().setCardOnBoard(newCard, selectedCard.getPosition());
                     selectedCard = null;
                     game.turnToNextPlayer();
+                    updateScoreBoard();
                 }
 
 
